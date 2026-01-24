@@ -1,21 +1,33 @@
-# Customer_Churn_Prediction-
-An end-to-end machine learning solution to predict customer attrition and enable proactive retention strategies. This project demonstrates practical application of classification algorithms to solve real-world business problems.
+# Customer Churn Prediction & Price Sensitivity Analysis
 
-# Key Features:
+##  Project Overview
 
-Predictive Modeling: Implements multiple algorithms (Logistic Regression, Random Forest, XGBoost) to identify at-risk customers
+An end-to-end machine learning solution that **identifies price sensitivity thresholds** and **predicts customer churn risk** through data-driven analysis of subscription businesses.
 
-Feature Engineering: Creates behavioral indicators like usage patterns, support interactions, and tenure metrics
+  **Key Discovery**: Found that customers paying **above $70/month** have **88% churn rate**, while those below **$63/month** show significantly higher retention.
 
-Business Intelligence: Generates actionable insights and customer segmentation for targeted interventions
+##  Key Features
 
-Production-Ready: Includes API endpoints and model monitoring capabilities
+### Business Intelligence
+- **Price Sensitivity Analysis**: Identified exact price breaking points causing churn
+- **Contract Impact**: Month-to-month contracts showed **100% churn rate** vs 25% for annual contracts
+- **Survivor Profiling**: Analyzed the 12% who stayed despite pricing issues
 
-Technical Stack: Python, Scikit-learn, XGBoost, Pandas, Flask/FastAPI, SHAP for explainability
+### Machine Learning Models
+1. **Price Threshold Classifier** - Predicts if a price point will cause churn
+2. **Survivor Profile Predictor** - Identifies customers likely to stay
+3. **Risk Scoring Engine** - Combines multiple factors into actionable risk scores
 
-# Learning Outcomes:
-Master imbalanced classification, feature engineering for behavioral data, model interpretability, and deploying ML solutions with measurable business impact. Perfect portfolio project showcasing data-driven decision making from exploration to deployment.
+###  Data Insights
+- **88.3% overall churn rate** in analyzed dataset (business crisis scenario)
+- **$13.32 price gap** between churners ($75.87) and survivors ($62.55)
+- **30.3 months avg tenure** for survivors vs 17.5 months for churners
 
-Impact: Reduces churn through early identification, optimizes retention budgets, and increases customer lifetime value through data-informed strategies.
+##  Methodology
 
+### 1. Data Analysis & Hypothesis Testing
 
+# Key analytical approach
+- Statistical validation of price thresholds
+- Cohort analysis by contract type
+- Survival analysis of customer tenure
