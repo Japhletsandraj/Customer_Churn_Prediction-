@@ -1,5 +1,5 @@
 # Customer Churn Prediction & Price Sensitivity Analysis
-[https://pricingpredictor.streamlit.app/]
+[https://pricingpredictor.streamlit.app/] - VIEW IN LIGHT THEME.
 
 ##  Project Overview
 
