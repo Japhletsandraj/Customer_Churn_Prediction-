@@ -155,19 +155,19 @@ def load_and_train_model():
     data = data.replace({'Yes': 1, 'No': 0, 'Female': 1, 'Male': 0})
     
     # Contract type encoding
-    contract_score = {'Month-to-month': 0, 'One year': 1, 'Two year': 2}
+    contract_score = {'Month-to-Month': 0, 'One-Year': 1, 'Two-Year': 2}
     data['contract_score'] = data['ContractType'].map(contract_score)
     
     # Risk score
     data['risk_score'] = 0
     data['risk_score'] += (data['MonthlyCharges'] > 70).astype(int)
-    data['risk_score'] += (data['ContractType'] == 'Month-to-month').astype(int)
+    data['risk_score'] += (data['ContractType'] == 'Month-to-Month').astype(int)
     data['risk_score'] += (data['Tenure'] < 12).astype(int)
     
     # Features for churn prediction
     features = ['MonthlyCharges', 'contract_score', 'Tenure', 'risk_score']
     X = data[features]
-    y = data['Churn']
+    y = data['Churn'].astype(int)
     
     # Train model
     rf = RandomForestClassifier(n_estimators=100, random_state=42, n_jobs=-1)
